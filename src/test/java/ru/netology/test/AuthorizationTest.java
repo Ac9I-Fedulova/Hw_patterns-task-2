@@ -74,7 +74,7 @@ public class AuthorizationTest {
         var registeredUser = getRegisteredUser("active");
         var wrongPassword = getRandomPassword();
         $("[data-test-id='login'] .input__control").setValue(registeredUser.getLogin());
-        $("[data-test-id='pass'] .input__control").setValue(wrongPassword);
+        $("[data-test-id='password'] .input__control").setValue(wrongPassword);
         $("[data-test-id='action-login'].button").click();
         $("[data-test-id='error-notification'] .notification__content")
                 .shouldBe(Condition.text("Ошибка! Неверно указан логин или пароль"))
